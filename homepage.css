@@ -188,7 +188,6 @@ input{
 
 
 
-
 /* contact section ends */
 
 .portfolio__container{
@@ -238,8 +237,46 @@ input{
 
 .footer__logo{
     font-size: 30px;
+    margin: 0;
+    
+}
+.footer__link + .footer__link{
+    margin-left: 1em;
 }
 
+
+.btn:hover{
+    /* background-color: #0ed7ff; */
+    background-color: var(--dark);
+    color: var(--accent);
+    box-shadow: 0px 0px 19px 4px rgba(14,215,255,0.6);
+    transition: .1s ease-in-out;
+}
+
+.githubproject__text:hover{
+    opacity: .8;
+    transition: .1s ease-in-out;
+}
+
+.fa-github:hover{
+    color: #ce8ff7;
+}
+
+.fa-linkedin:hover{
+    color: #0072b1;
+}
+
+.fa-envelope:hover{
+    color: #e0d7bf
+}
+
+.fa-smile-wink:hover{
+    color: #e8d41c
+}
+
+input:focus, textarea:focus{
+    box-shadow: 0px 0px 19px 4px rgba(14,215,255,0.6);
+}
 
 
 
