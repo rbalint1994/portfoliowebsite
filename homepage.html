@@ -7,21 +7,31 @@
     <title>Bálint Roland Portfolio Site</title>
     <link rel="stylesheet" href="homepage.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
-        <img src="cssbw2.png" class="header__logo" alt="">
+        <!-- <img src="cssbw2.png" class="header__logo" alt="Logo">
         <nav class="nav">
-            <ul>
-                <li>about</li>
-                <li>portfolio</li>
-                <li>contact</li>
+            <ul class="nav__links">
+                <li><a>about</a></li>
+                <li><a>portfolio</a></li>
+                <li><a>contact</a></li>
             </ul>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
-        </nav>
+        </nav> -->
+            <!-- <a class="btn nav__btn">Contact Me!</a> -->
+            <nav>
+                <div class="logo">
+                    <h4>BR</h4>
+                </div>
+                <ul class="nav__links">
+                    <li><a href="#about" >about</a></li>
+                    <li><a href="#contact" >contact</a></li>
+                    <li><a href="#portfolio" >portfolio</a></li>
+                </ul>
+            </nav>
     </header>
     <section class="section__hero">
         <div class="container">
@@ -37,11 +47,11 @@
             </div>
         </div>
     </section>
-    <section class="section__about">
+    <section class="section__about" id="about">
         <h2 class="main__title">about me</h2>
         <div class="container">
             <p class="about__text">I think that life long learning is the key for a happy and fulfilling life. 
-                That’s why I always aspire to be better than my yesterday self. <br>I always had an interest 
+                That’s why I always aspire to be better than my yesterday self.<br>I always had an interest 
                 for technology and design, so learning front-end developement was a no brainer for me, after I realized it perfectly combines my passions into one big package. 
                 I am currently on the road to become a professional front-end developer. After this cheesy intro let me introduce you my skills and knowledge. 
                 If you liked this short intro about me, click the button to get my CV!</p>
@@ -76,25 +86,26 @@
             <a href="#" class="btn center">Check out my portfolio<i class="far fa-eye"></i></a>
         </div>
     </section>
-    <section class="section__contact">
+    <section class="section__contact" id="contact">
         <h2 class="main__title">contact</h2>
         <div class="container">
-                <form action="submit">
+                <form  action="https://formsubmit.co/rbalint1994@gmail.com" method="POST">
                     <div class="col">
-                        <input class="name__input" type="text" placeholder="Name">
-                        <input class="email__input" type="email" placeholder="Email"> 
+                        <input class="name__input" type="text" name="name" placeholder="Name" required>
+                        <input class="email__input" type="email" name="Email Address" placeholder="Email" required> 
+                        <input type="hidden" name="_subject" value="New message from your portfolio website">
                     </div>
                     <div class="col">
-                        <textarea class="message__input" type="textarea" placeholder="Write your message here..." rows="10"></textarea>
+                        <textarea class="message__input" name="message" type="text" placeholder="Write your message here..." rows="10"></textarea>
                     </div>
                     <div class="btn__container">
-                        <a href="#" class="btn" type="submit">Send message<i class="fas fa-paper-plane"></i></a>
+                        <button class="btn" type="submit">Send message<i class="fas fa-paper-plane"></i></button>
                     </div>
                 </form>
                 
         </div>
     </section>
-    <section class="section__portfolio">
+    <section class="section__portfolio" id="portfolio">
         <h2 class="main__title">portfolio</h2>
         <div class="container">
             <div class="portfolio__container">
@@ -145,5 +156,6 @@
         <a href="#" class="footer__link"><i class="fab fa-linkedin footer__logo"></i></a>
         <a href="#" class="footer__link"><i class="fas fa-envelope footer__logo"></i></a>
     </footer>
+    <script src="homepage.js"></script>
 </body>
 </html>
